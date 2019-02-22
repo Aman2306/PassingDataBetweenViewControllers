@@ -1,24 +1,119 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="R6w-iq-20K">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--FirstViewController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FirstViewController" id="BYZ-38-t0r" customClass="FirstViewController" customModule="PassingDataBetweenViewControllers" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DOc-Lv-E94">
+                                <rect key="frame" x="64" y="318.5" width="247" height="30"/>
+                                <state key="normal" title="Pass Data to second view Controller"/>
+                                <connections>
+                                    <action selector="passDataButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vrw-3J-OJH"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter some text" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FhR-pP-Gca">
+                                <rect key="frame" x="16" y="230" width="343" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="1R0-pq-pMh"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="DOc-Lv-E94" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="8ue-sD-ESr"/>
+                            <constraint firstItem="DOc-Lv-E94" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KoF-DR-ZmI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FhR-pP-Gca" secondAttribute="trailing" constant="16" id="Ngu-gb-cxT"/>
+                            <constraint firstItem="FhR-pP-Gca" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="230" id="QBG-3n-8uI"/>
+                            <constraint firstItem="FhR-pP-Gca" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ygk-Hs-15K"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="FirstViewController" id="csY-ot-RNy"/>
+                    <connections>
+                        <outlet property="textField" destination="FhR-pP-Gca" id="7ib-p6-iBB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1241" y="118"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="5MG-Jh-x6p">
+            <objects>
+                <viewController storyboardIdentifier="SecondViewController" id="p4k-FP-UqR" customClass="SecondViewController" customModule="PassingDataBetweenViewControllers" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dlz-4h-E4t">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter some text" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g2g-z7-0tL">
+                                <rect key="frame" x="16" y="250" width="343" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="TpS-ET-Y1V"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ciN-N1-UOB">
+                                <rect key="frame" x="77.5" y="318.5" width="220" height="30"/>
+                                <state key="normal" title="Pass data to first view controller"/>
+                                <connections>
+                                    <action selector="passDataButtonTapped:" destination="p4k-FP-UqR" eventType="touchUpInside" id="rKM-it-Qiu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Cgo-OH-dcz" firstAttribute="trailing" secondItem="g2g-z7-0tL" secondAttribute="trailing" constant="16" id="6st-CC-kId"/>
+                            <constraint firstItem="ciN-N1-UOB" firstAttribute="centerX" secondItem="dlz-4h-E4t" secondAttribute="centerX" id="6wv-KC-k11"/>
+                            <constraint firstItem="ciN-N1-UOB" firstAttribute="centerY" secondItem="dlz-4h-E4t" secondAttribute="centerY" id="KWZ-3o-xgo"/>
+                            <constraint firstItem="g2g-z7-0tL" firstAttribute="top" secondItem="dlz-4h-E4t" secondAttribute="top" constant="250" id="McP-o8-VWM"/>
+                            <constraint firstItem="g2g-z7-0tL" firstAttribute="leading" secondItem="Cgo-OH-dcz" secondAttribute="leading" constant="16" id="y1A-Dn-X2k"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Cgo-OH-dcz"/>
+                    </view>
+                    <connections>
+                        <outlet property="textField" destination="g2g-z7-0tL" id="sgh-OG-4Zm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cEg-Hi-aVT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2076" y="118.29085457271366"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="YUK-rz-RgT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="R6w-iq-20K" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="PLt-mU-xVm">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="nN2-Py-yIN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QG2-U0-AGQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="428" y="117.39130434782609"/>
         </scene>
     </scenes>
 </document>

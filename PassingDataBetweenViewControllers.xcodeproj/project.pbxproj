@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		A6F835BB2220024100A6D4D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F835BA2220024100A6D4D4 /* AppDelegate.swift */; };
-		A6F835BD2220024100A6D4D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F835BC2220024100A6D4D4 /* ViewController.swift */; };
+		A6F835BD2220024100A6D4D4 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F835BC2220024100A6D4D4 /* FirstViewController.swift */; };
 		A6F835C02220024100A6D4D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6F835BE2220024100A6D4D4 /* Main.storyboard */; };
 		A6F835C22220024300A6D4D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6F835C12220024300A6D4D4 /* Assets.xcassets */; };
 		A6F835C52220024300A6D4D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6F835C32220024300A6D4D4 /* LaunchScreen.storyboard */; };
+		A6F835CD2220044100A6D4D4 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F835CC2220044100A6D4D4 /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A6F835B72220024100A6D4D4 /* PassingDataBetweenViewControllers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PassingDataBetweenViewControllers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6F835BA2220024100A6D4D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A6F835BC2220024100A6D4D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A6F835BC2220024100A6D4D4 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		A6F835BF2220024100A6D4D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A6F835C12220024300A6D4D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A6F835C42220024300A6D4D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A6F835C62220024300A6D4D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A6F835CC2220044100A6D4D4 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +57,22 @@
 			isa = PBXGroup;
 			children = (
 				A6F835BA2220024100A6D4D4 /* AppDelegate.swift */,
-				A6F835BC2220024100A6D4D4 /* ViewController.swift */,
+				A6F835CE2220048700A6D4D4 /* Controller */,
 				A6F835BE2220024100A6D4D4 /* Main.storyboard */,
 				A6F835C12220024300A6D4D4 /* Assets.xcassets */,
 				A6F835C32220024300A6D4D4 /* LaunchScreen.storyboard */,
 				A6F835C62220024300A6D4D4 /* Info.plist */,
 			);
 			path = PassingDataBetweenViewControllers;
+			sourceTree = "<group>";
+		};
+		A6F835CE2220048700A6D4D4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A6F835BC2220024100A6D4D4 /* FirstViewController.swift */,
+				A6F835CC2220044100A6D4D4 /* SecondViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +146,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6F835BD2220024100A6D4D4 /* ViewController.swift in Sources */,
+				A6F835CD2220044100A6D4D4 /* SecondViewController.swift in Sources */,
+				A6F835BD2220024100A6D4D4 /* FirstViewController.swift in Sources */,
 				A6F835BB2220024100A6D4D4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
